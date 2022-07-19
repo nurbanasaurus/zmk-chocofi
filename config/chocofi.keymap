@@ -185,10 +185,10 @@
             //                               |   ESC   |  SPACE  |   TAB   |  |  RETURN |BACKSPACE|   DEL   |
 
             bindings = <
-  &kp Q   &kp W     &kp F      &kp P             &kp B              &kp J       &kp L         &kp U    &kp Y  &kp BACKSPACE
-  &kp A   &kp R     &kp S      &kp T             &kp G              &kp M       &kp N         &kp E    &kp I          &kp O
-  &kp Z   &kp X     &kp C      &kp D             &kp V              &kp K       &kp H     &kp COMMA  &kp DOT       &kp FSLH
-                 &kp LGUI  &kp SPACE  &lt 1 LEFT_ARROW  &lt 2 RIGHT_ARROW  &kp RSHIFT  &kp LEFT_ALT
+  &kp Q   &kp W     &kp F      &kp P            &kp B      &kp J       &kp L         &kp U    &kp Y  &kp BACKSPACE
+  &kp A   &kp R     &kp S      &kp T            &kp G      &kp M       &kp N         &kp E    &kp I          &kp O
+  &kp Z   &kp X     &kp C      &kp D            &kp V      &kp K       &kp H     &kp COMMA  &kp DOT       &kp FSLH
+                 &kp LGUI  &kp SPACE  &lt 1 LG(LA(D))  &lt 2 TAB  &kp RSHIFT  &kp LEFT_ALT
             >;
         };
 
@@ -203,10 +203,10 @@
 
         sym_layer {
             bindings = <
-     &grvtilde  &kp EXCLAMATION                 &kp AT           &kp HASH      &kp PERCENT  &kp CARET          &kp AMPS           &kp STAR  &kp SEMICOLON  &kp COLON
- &kp C_AL_LOCK   &kp LEFT_ARROW   &kp LEFT_PARENTHESIS   &kp LEFT_BRACKET   &kp LEFT_BRACE      &none     &kp LG(SPACE)              &none          &none  &kp ENTER
-      &kp CAPS     &kp C_AC_CUT  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp PSCRN  &kp LC(LG(LEFT))  &kp LC(LG(RIGHT))      &sel_word      &none
-                                                 &none              &none            &mo 3     &trans             &none              &none
+     &grvtilde  &kp EXCLAMATION                 &kp AT           &kp HASH      &kp PERCENT       &kp CARET          &kp AMPS           &kp STAR  &kp SEMICOLON  &kp COLON
+ &kp C_AL_LOCK   &kp LEFT_ARROW   &kp LEFT_PARENTHESIS   &kp LEFT_BRACKET   &kp LEFT_BRACE           &none     &kp LG(SPACE)              &none          &none  &kp ENTER
+      &kp CAPS     &kp C_AC_CUT  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp LG(LS(N4))  &kp LC(LG(LEFT))  &kp LC(LG(RIGHT))      &sel_word      &none
+                                                 &none              &none            &mo 3          &trans             &none              &none
             >;
         };
 
@@ -220,4 +220,3 @@
         };
     };
 };
-
