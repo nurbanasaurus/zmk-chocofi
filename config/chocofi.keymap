@@ -169,7 +169,7 @@
         };
 
         combo_delwrd {
-            bindings = <&kp LA(BACKSPACE)>;
+            bindings = <&kp LC(BACKSPACE)>;
             key-positions = <8 9>;
         };
     };
