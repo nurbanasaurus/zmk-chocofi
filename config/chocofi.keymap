@@ -187,7 +187,7 @@
 
             bindings = <
   &kp Q           &kp W        &kp F       &kp P            &kp B      &kp J       &kp L         &kp U       &kp Y  &kp BACKSPACE
-  &kp A  &mt LEFT_GUI R  &mt LCTRL S  &mt LALT T            &kp G      &kp M  &mt RALT N   &mt RCTRL E  &mt RGUI I          &kp O
+  &kp A  &mt LEFT_GUI R  &mt LCTRL S  &mt LALT T            &kp G      &kp M  &mt RALT N  &hmr RCTRL E  &mt RGUI I          &kp O
   &kp Z           &kp X        &kp C       &kp D            &kp V      &kp K       &kp H     &kp COMMA     &kp DOT      &kp SLASH
                             &kp LGUI   &kp SPACE  &lt 1 LG(LA(D))  &lt 2 TAB  &kp RSHIFT  &kp LEFT_ALT
             >;
