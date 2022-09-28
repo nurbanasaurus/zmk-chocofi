@@ -46,9 +46,9 @@
             compatible = "zmk,behavior-hold-tap";
             label = "LEFT_POSITIONAL_HOLD_TAP";
             #binding-cells = <2>;
-            flavor = "tap-unless-interrupted";
-            tapping-term-ms = <100>;// <---[[produces tap if held longer than tapping-term-ms]]
-            quick-tap-ms = <200>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <300>;// <---[[produces tap if held longer than tapping-term-ms]]
+            quick-tap-ms = <0>;
             bindings =
                 <&kp>,
                 <&kp>;
@@ -59,9 +59,9 @@
             compatible = "zmk,behavior-hold-tap";
             label = "RIGHT_POSITIONAL_HOLD_TAP";
             #binding-cells = <2>;
-            flavor = "tap-unless-interrupted";
-            tapping-term-ms = <100>;// <---[[produces tap if held longer than tapping-term-ms]]
-            quick-tap-ms = <200>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <300>;// <---[[produces tap if held longer than tapping-term-ms]]
+            quick-tap-ms = <0>;
             bindings =
                 <&kp>,
                 <&kp>;
@@ -72,7 +72,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "ONE_SHOT_MODS";
             #binding-cells = <2>;
-            tapping-term-ms = <200>;// <---[[moderate duration]]
+            tapping-term-ms = <300>;// <---[[moderate duration]]
             quick-tap-ms = <0>;
             flavor = "balanced";
             bindings =
@@ -86,7 +86,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_BACKSLASH_PIPE";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <300>;
             bindings =
                 <&kp BSLH>,
                 <&kp PIPE>;
@@ -95,7 +95,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_GRAVE_TILDE";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <300>;
             bindings =
                 <&kp GRAVE>,
                 <&kp TILDE>;
@@ -104,7 +104,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_APOSTROPE_QUOTE";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <300>;
             bindings =
                 <&kp SQT>,
                 <&kp DQT>;
@@ -113,7 +113,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_EURO_DOLLAR";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <300>;
             bindings =
                 <&kp RA(N5)>,
                 <&kp DLLR>;
@@ -122,7 +122,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_CLOSE";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <300>;
             bindings =
                 <&kp LC(F4)>,
                 <&kp LA(F4)>;
