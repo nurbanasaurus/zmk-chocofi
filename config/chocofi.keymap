@@ -186,10 +186,10 @@
             //                               |   ESC   |  SPACE  |   TAB   |  |  RETURN |BACKSPACE|   DEL   |
 
             bindings = <
-  &kp Q           &kp W        &kp F       &kp P            &kp B      &kp J       &kp L         &kp U       &kp Y  &kp BACKSPACE
-  &kp A  &mt LEFT_GUI R  &mt LCTRL S  &mt LALT T            &kp G      &kp M  &mt RALT N  &hmr RCTRL E  &mt RGUI I          &kp O
-  &kp Z           &kp X        &kp C       &kp D            &kp V      &kp K       &kp H     &kp COMMA     &kp DOT      &kp SLASH
-                            &kp LGUI   &kp SPACE  &lt 1 LG(LA(D))  &lt 2 TAB  &kp RSHIFT  &kp LEFT_ALT
+  &kp Q            &kp W         &kp F        &kp P            &kp B   &kp J        &kp L         &kp U        &kp Y  &kp BACKSPACE
+  &kp A  &hml LEFT_GUI R  &hml LCTRL S  &hml LALT T            &kp G   &kp M  &hmr RALT N  &hmr RCTRL E  &hmr RGUI I          &kp O
+  &kp Z            &kp X         &kp C        &kp D            &kp V   &kp K        &kp H     &kp COMMA      &kp DOT      &kp SLASH
+                              &kp LGUI    &kp SPACE  &lt 1 LG(LA(D))   &mo 2   &kp RSHIFT  &kp LEFT_ALT
             >;
         };
 
@@ -197,7 +197,7 @@
             bindings = <
    &kp ESC        &kp HOME          &kp UP          &kp END    &kp UNDER  &kp MINUS  &kp N7      &kp N8  &kp N9    &grvtilde
    &kp TAB  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp LA(TAB)  &kp EQUAL  &kp N4      &kp N5  &kp N6    &apoquote
- &kp LG(Z)       &kp LG(X)       &kp LG(C)        &kp LCTRL    &bslhpipe   &kp PLUS  &kp N1      &kp N2  &kp N3  &eurodollar
+ &kp LG(Z)       &kp LG(X)       &kp LG(C)            &none    &bslhpipe   &kp PLUS  &kp N1      &kp N2  &kp N3  &eurodollar
                                      &none            &none       &trans      &mo 3  &kp N0  &kp PERIOD
             >;
         };
