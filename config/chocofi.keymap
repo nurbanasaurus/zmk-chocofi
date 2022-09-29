@@ -186,37 +186,37 @@
             //                               |   ESC   |  SPACE  |   TAB   |  |  RETURN |BACKSPACE|   DEL   |
 
             bindings = <
-  &kp Q            &kp W         &kp F        &kp P            &kp B   &kp J        &kp L         &kp U        &kp Y  &kp BACKSPACE
-  &kp A  &hml LEFT_GUI R  &hml LCTRL S  &hml LALT T            &kp G   &kp M  &hmr RALT N  &hmr RCTRL E  &hmr RGUI I          &kp O
-  &kp Z            &kp X         &kp C        &kp D            &kp V   &kp K        &kp H     &kp COMMA      &kp DOT      &kp SLASH
-                              &kp LGUI    &kp SPACE  &lt 1 LG(LA(D))   &mo 2   &kp RSHIFT  &kp LEFT_ALT
+         &kp Q            &kp W                        &kp F        &kp P          &kp B    &kp J        &kp L         &kp U        &kp Y  &kp SEMICOLON
+ &hml LSHIFT A  &hml LEFT_GUI R                 &hml LCTRL S  &hml LALT T          &kp G    &kp M  &hmr RALT N  &hmr RCTRL E  &hmr RGUI I  &hmr RSHIFT O
+         &kp Z            &kp X                        &kp C        &kp D          &kp V    &kp K        &kp H     &kp COMMA      &kp DOT      &kp SLASH
+                                 &osm LC(LA(LSHFT)) LEFT_WIN  &lt 2 SPACE  &kp BACKSPACE  &kp TAB        &mo 1         &none
             >;
         };
 
         num_layer {
             bindings = <
-   &kp ESC        &kp HOME          &kp UP          &kp END    &kp UNDER  &kp MINUS  &kp N7      &kp N8  &kp N9    &grvtilde
-   &kp TAB  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp LA(TAB)  &kp EQUAL  &kp N4      &kp N5  &kp N6    &apoquote
- &kp LG(Z)       &kp LG(X)       &kp LG(C)            &none    &bslhpipe   &kp PLUS  &kp N1      &kp N2  &kp N3  &eurodollar
-                                     &none            &none       &trans      &mo 3  &kp N0  &kp PERIOD
+  &none   &none   &none   &none  &kp UNDER  &kp MINUS  &kp N7      &kp N8  &kp N9   &kp BACKSPACE
+  &none   &none   &none   &none  &kp EQUAL   &kp PLUS  &kp N4      &kp N5  &kp N6       &kp ENTER
+  &none   &none   &none   &none  &bslhpipe     &kp N0  &kp N1      &kp N2  &kp N3  &kp KP_NUMLOCK
+                 &trans   &mo 3     &trans     &reset  &trans  &kp PERIOD
             >;
         };
 
         sym_layer {
             bindings = <
-  &kp EXCL          &kp AT               &kp HASH         &kp DOLLAR      &kp PERCENT       &kp CARET          &kp AMPS           &kp STAR  &kp SEMICOLON  &kp COLON
- &grvtilde  &kp LEFT_ARROW   &kp LEFT_PARENTHESIS   &kp LEFT_BRACKET   &kp LEFT_BRACE           &none     &kp LG(SPACE)              &none          &none  &kp ENTER
-  &kp CAPS           &none  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp LG(LS(N4))  &kp LC(LG(LEFT))  &kp LC(LG(RIGHT))          &none      &none
-                                            &none              &none            &mo 3          &trans             &none              &none
+ &kp EXCL                &kp AT               &kp HASH        &kp DOLLAR        &kp PERCENT       &kp CARET        &kp AMPS      &kp STAR        &grvtilde  &kp COLON
+  &kp TAB  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &apoquote
+    &none                 &none         &kp LEFT_BRACE   &kp RIGHT_BRACE              &none       &bslhpipe        &kp HOME       &kp END            &none      &none
+                                                 &none            &trans             &trans          &trans           &mo 3         &none
             >;
         };
 
         fun_layer {
             bindings = <
-  &none  &kp F7  &kp F8  &kp F9  &kp F10  &kp C_VOL_UP    &kp C_PREVIOUS    &kp C_NEXT       &none   &kp C_BRI_UP
-  &none  &kp F4  &kp F5  &kp F6  &kp F11  &kp C_VOL_DN  &kp C_PLAY_PAUSE         &none       &none   &kp C_BRI_DN
-  &none  &kp F1  &kp F2  &kp F3  &kp F12  &bt BT_SEL 0      &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_CLR  &kp C_BRI_MIN
-                  &none   &none   &trans        &trans             &none         &none
+     &kp LC(LA(DELETE))   &none   &none    &none       &none  &kp C_VOL_UP                &none              &none                  &none             &kp C_BRI_UP
+                 &kp F2  &kp F4  &kp F8  &kp F11     &kp F12  &kp C_VOL_DN  &hmr RIGHT_ALT C_PP  &hmr RCTRL C_PREV  &hmr RIGHT_GUI C_NEXT             &kp C_BRI_DN
+ &kp LC(LG(LEFT_ARROW))   &none   &none    &none       &none  &bt BT_SEL 0         &bt BT_SEL 1       &bt BT_SEL 2                  &none  &kp LC(LG(RIGHT_ARROW))
+                                  &none   &trans  &bt BT_PRV    &bt BT_NXT               &trans         &bt BT_CLR
             >;
         };
     };
