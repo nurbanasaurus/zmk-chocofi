@@ -189,7 +189,7 @@
          &kp Q            &kp W                        &kp F        &kp P          &kp B    &kp J        &kp L         &kp U        &kp Y  &kp SEMICOLON
  &hml LSHIFT A  &hml LEFT_GUI R                 &hml LCTRL S  &hml LALT T          &kp G    &kp M  &hmr RALT N  &hmr RCTRL E  &hmr RGUI I  &hmr RSHIFT O
          &kp Z            &kp X                        &kp C        &kp D          &kp V    &kp K        &kp H     &kp COMMA      &kp DOT      &kp SLASH
-                                 &osm LC(LA(LSHFT)) LEFT_WIN  &lt 2 SPACE  &kp BACKSPACE  &kp TAB        &mo 1         &none
+                                 &osm LC(LA(LSHFT)) LEFT_WIN  &lt 2 SPACE  &kp BACKSPACE  &kp TAB        &mo 1       &kp DEL
             >;
         };
 
