@@ -191,16 +191,16 @@
             //                               |   ESC   |  SPACE  |   TAB   |  |  RETURN |BACKSPACE|   DEL   |
 
             bindings = <
-  &kp Q            &kp W                        &kp F        &kp P      &kp B             &kp J          &kp L         &kp U        &kp Y  &kp SEMICOLON
-  &kp A  &hml LEFT_GUI R                 &hml LCTRL S  &hml LALT T      &kp G             &kp M    &hmr RALT N  &hmr RCTRL E  &hmr RGUI I          &kp O
-  &kp Z            &kp X                        &kp C        &kp D      &kp V             &kp K          &kp H     &kp COMMA      &kp DOT      &kp SLASH
-                          &osm LC(LA(LSHFT)) LEFT_WIN    &kp SPACE  &lt 2 DEL  &lt 1 LEFT_SHIFT  &kp BACKSPACE       &kp TAB
+  &kp Q            &kp W           &kp F        &kp P   &kp B   &kp J          &kp L            &kp U        &kp Y  &kp SEMICOLON
+  &kp A  &hml LEFT_GUI R    &hml LCTRL S  &hml LALT T   &kp G   &kp M    &hmr RALT N     &hmr RCTRL E  &hmr RGUI I          &kp O
+  &kp Z            &kp X           &kp C        &kp D   &kp V   &kp K          &kp H        &kp COMMA      &kp DOT      &kp SLASH
+                          &kp LEFT_SHIFT    &kp SPACE   &mo 2   &mo 1  &kp BACKSPACE  &kp RIGHT_SHIFT
             >;
         };
 
         num_layer {
             bindings = <
-  &none   &none   &none   &none  &kp UNDER  &kp MINUS      &kp N7  &kp N8  &kp N9   &kp BACKSPACE
+  &none   &none   &none   &none  &kp UNDER  &kp MINUS      &kp N7  &kp N8  &kp N9      &kp DELETE
   &none   &none   &none   &none  &kp EQUAL   &kp PLUS      &kp N4  &kp N5  &kp N6       &kp ENTER
   &none   &none   &none   &none  &bslhpipe     &kp N0      &kp N1  &kp N2  &kp N3  &kp KP_NUMLOCK
                  &trans  &trans      &mo 3     &trans  &kp PERIOD   &none
