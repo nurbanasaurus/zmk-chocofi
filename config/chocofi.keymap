@@ -191,10 +191,10 @@
             //                               |   ESC   |  SPACE  |   TAB   |  |  RETURN |BACKSPACE|   DEL   |
 
             bindings = <
-  &kp Q            &kp W                        &kp F        &kp P      &kp B            &kp J        &kp L         &kp U        &kp Y  &kp SEMICOLON
-  &kp A  &hml LEFT_GUI R                 &hml LCTRL S  &hml LALT T      &kp G            &kp M  &hmr RALT N  &hmr RCTRL E  &hmr RGUI I          &kp O
-  &kp Z            &kp X                        &kp C        &kp D      &kp V            &kp K        &kp H     &kp COMMA      &kp DOT      &kp SLASH
-                          &osm LC(LA(LSHFT)) LEFT_WIN    &kp SPACE  &lt 2 DEL  &lt 1 BACKSPACE   &kp LSHIFT       &kp TAB
+  &kp Q            &kp W                        &kp F        &kp P      &kp B             &kp J          &kp L         &kp U        &kp Y  &kp SEMICOLON
+  &kp A  &hml LEFT_GUI R                 &hml LCTRL S  &hml LALT T      &kp G             &kp M    &hmr RALT N  &hmr RCTRL E  &hmr RGUI I          &kp O
+  &kp Z            &kp X                        &kp C        &kp D      &kp V             &kp K          &kp H     &kp COMMA      &kp DOT      &kp SLASH
+                          &osm LC(LA(LSHFT)) LEFT_WIN    &kp SPACE  &lt 2 DEL  &lt 1 LEFT_SHIFT  &kp BACKSPACE       &kp TAB
             >;
         };
 
