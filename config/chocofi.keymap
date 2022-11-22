@@ -194,7 +194,7 @@
   &kp Q            &kp W           &kp F        &kp P   &kp B   &kp J          &kp L            &kp U        &kp Y  &kp SEMICOLON
   &kp A  &hml LEFT_GUI R    &hml LCTRL S  &hml LALT T   &kp G   &kp M    &hmr RALT N     &hmr RCTRL E  &hmr RGUI I          &kp O
   &kp Z            &kp X           &kp C        &kp D   &kp V   &kp K          &kp H        &kp COMMA      &kp DOT      &kp SLASH
-                          &kp LEFT_SHIFT    &kp SPACE   &mo 2   &mo 1  &kp BACKSPACE  &kp RIGHT_SHIFT
+                          &kp LEFT_SHIFT    &kp SPACE   &mo 2   &sl 1  &kp BACKSPACE  &kp RIGHT_SHIFT
             >;
         };
 
