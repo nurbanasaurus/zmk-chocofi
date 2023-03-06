@@ -132,7 +132,7 @@
     // macros
 
     macros {
-        sel_word: select_word {
+        select_word: select_word {
             label = "ZM_SELECT_WORD";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -148,81 +148,98 @@
                 <&macro_release>,
                 <&kp LSHFT &kp LCTRL>;
         };
+
+        label = "ZM_SELECT_WORD";
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings =
+            <&macro_press>,
+            <&kp LCTRL>,
+            <&macro_tap>,
+            <&kp LEFT>,
+            <&macro_press>,
+            <&kp LSHFT>,
+            <&macro_tap>,
+            <&kp RIGHT>,
+            <&macro_release>,
+            <&kp LSHFT &kp LCTRL>;
+    };
+};
+
+// combos for accents dead keys (for US_intl_altgr_deadkeys OS layout)
+
+combos {
+    compatible = "zmk,combos";
+
+    combo_acc {
+        timeout-ms = <50>;
+        key-positions = <1 2>;
+        layers = <0>;
+        bindings = <&kp RA(SINGLE_QUOTE)>;
     };
 
-    // combos for accents dead keys (for US_intl_altgr_deadkeys OS layout)
-
-    combos {
-        compatible = "zmk,combos";
-
-        combo_acc {
-            timeout-ms = <50>;
-            key-positions = <1 2>;
-            layers = <0>;
-            bindings = <&kp RA(SINGLE_QUOTE)>;
-        };
-
-        combo_grv {
-            timeout-ms = <50>;
-            key-positions = <2 3>;
-            layers = <0>;
-            bindings = <&kp RA(GRAVE)>;
-        };
-
-        combo_delwrd {
-            bindings = <&kp LC(BACKSPACE)>;
-            key-positions = <8 9>;
-        };
-
-        new_combo {
-            bindings = <&kp ENTER>;
-            key-positions = <19 34>;
-        };
+    combo_grv {
+        timeout-ms = <50>;
+        key-positions = <2 3>;
+        layers = <0>;
+        bindings = <&kp RA(GRAVE)>;
     };
 
-    keymap {
-        compatible = "zmk,keymap";
-
-        default_layer {
-            // ----------------------------------------------------------------------------------------------------------------------------
-            // |    Q    |    W    |    F    |    P    |    B    |                      |    J    |    L    |    I    |    Y    |    ;    |
-            // |    A    |    R    |    S    |    T    |    G    |                      |    M    |    N    |    E    |    I    |    O    |
-            // |    Z    |    X    |    C    |    D    |    V    |                      |    K    |    H    |    ,    |    .    |    /    |
-            //                               |   ESC   |  SPACE  |   TAB   |  |  RETURN |BACKSPACE|   DEL   |
-
-            bindings = <
-  &kp Q            &kp W           &kp F        &kp P   &kp B   &kp J          &kp L            &kp U        &kp Y  &kp SEMICOLON
-  &kp A  &hml LEFT_GUI R    &hml LCTRL S  &hml LALT T   &kp G   &kp M    &hmr RALT N     &hmr RCTRL E  &hmr RGUI I          &kp O
-  &kp Z            &kp X           &kp C        &kp D   &kp V   &kp K          &kp H        &kp COMMA      &kp DOT      &kp SLASH
-                          &kp LEFT_SHIFT    &kp SPACE   &mo 2   &sl 1  &kp BACKSPACE  &kp RIGHT_SHIFT
-            >;
-        };
-
-        num_layer {
-            bindings = <
-  &none   &none   &none   &none  &kp UNDER  &kp MINUS      &kp N7  &kp N8  &kp N9      &kp DELETE
-  &none   &none   &none   &none  &kp EQUAL   &kp PLUS      &kp N4  &kp N5  &kp N6       &kp ENTER
-  &none   &none   &none   &none  &bslhpipe     &kp N0      &kp N1  &kp N2  &kp N3  &kp KP_NUMLOCK
-                 &trans  &trans      &mo 3     &trans  &kp PERIOD   &none
-            >;
-        };
-
-        sym_layer {
-            bindings = <
- &kp EXCL                &kp AT               &kp HASH        &kp DOLLAR        &kp PERCENT       &kp CARET        &kp AMPS      &kp STAR        &grvtilde  &kp COLON
-  &kp TAB  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &apoquote
-    &none                 &none         &kp LEFT_BRACE   &kp RIGHT_BRACE              &none       &bslhpipe        &kp HOME       &kp END            &none      &none
-                                                 &none            &trans             &trans           &mo 3          &trans         &none
-            >;
-        };
-
-        fun_layer {
-            bindings = <
-     &kp LC(LA(DELETE))   &none   &none       &none    &none  &kp C_VOL_UP                &none              &none                  &none             &kp C_BRI_UP
-                 &kp F2  &kp F4  &kp F8     &kp F11  &kp F12  &kp C_VOL_DN  &hmr RIGHT_ALT C_PP  &hmr RCTRL C_PREV  &hmr RIGHT_GUI C_NEXT             &kp C_BRI_DN
- &kp LC(LG(LEFT_ARROW))   &none   &none       &none    &none  &bt BT_SEL 0         &bt BT_SEL 1       &bt BT_SEL 2                 &reset  &kp LC(LG(RIGHT_ARROW))
-                                  &none  &bt BT_PRV   &trans        &trans           &bt BT_NXT         &bt BT_CLR
-            >;
-        };
+    combo_delwrd {
+        bindings = <&kp LC(BACKSPACE)>;
+        key-positions = <8 9>;
     };
+
+    new_combo {
+        bindings = <&kp ENTER>;
+        key-positions = <19 34>;
+    };
+};
+
+keymap {
+    compatible = "zmk,keymap";
+
+    default_layer {
+        // ----------------------------------------------------------------------------------------------------------------------------
+        // |    Q    |    W    |    F    |    P    |    B    |                      |    J    |    L    |    I    |    Y    |    ;    |
+        // |    A    |    R    |    S    |    T    |    G    |                      |    M    |    N    |    E    |    I    |    O    |
+        // |    Z    |    X    |    C    |    D    |    V    |                      |    K    |    H    |    ,    |    .    |    /    |
+        //                               |   ESC   |  SPACE  |   TAB   |  |  RETURN |BACKSPACE|   DEL   |
+
+        bindings = <
+&kp Q            &kp W           &kp F        &kp P  &kp B  &kp J          &kp L            &kp U        &kp Y  &kp SEMICOLON
+&kp A  &hml LEFT_GUI R    &hml LCTRL S  &hml LALT T  &kp G  &kp M    &hmr RALT N     &hmr RCTRL E  &hmr RGUI I          &kp O
+&kp Z            &kp X           &kp C        &kp D  &kp V  &kp K          &kp H        &kp COMMA      &kp DOT      &kp SLASH
+                        &kp LEFT_SHIFT    &kp SPACE  &mo 2  &sl 1  &kp BACKSPACE  &kp RIGHT_SHIFT
+        >;
+    };
+
+    num_layer {
+        bindings = <
+&none  &none   &none   &none  &kp UNDER  &kp MINUS      &kp N7  &kp N8  &kp N9      &kp DELETE
+&none  &none   &none   &none  &kp EQUAL   &kp PLUS      &kp N4  &kp N5  &kp N6       &kp ENTER
+&none  &none   &none   &none  &bslhpipe     &kp N0      &kp N1  &kp N2  &kp N3  &kp KP_NUMLOCK
+              &trans  &trans      &mo 3     &trans  &kp PERIOD   &none
+        >;
+    };
+
+    sym_layer {
+        bindings = <
+&kp EXCL                &kp AT               &kp HASH        &kp DOLLAR        &kp PERCENT       &kp CARET        &kp AMPS      &kp STAR        &grvtilde  &kp COLON
+ &kp TAB  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &apoquote
+   &none                 &none         &kp LEFT_BRACE   &kp RIGHT_BRACE              &none       &bslhpipe        &kp HOME       &kp END            &none      &none
+                                                &none            &trans             &trans           &mo 3          &trans         &none
+        >;
+    };
+
+    fun_layer {
+        bindings = <
+    &kp LC(LA(DELETE))   &none   &none       &none    &none  &kp C_VOL_UP                &none              &none                  &none             &kp C_BRI_UP
+                &kp F2  &kp F4  &kp F8     &kp F11  &kp F12  &kp C_VOL_DN  &hmr RIGHT_ALT C_PP  &hmr RCTRL C_PREV  &hmr RIGHT_GUI C_NEXT             &kp C_BRI_DN
+&kp LC(LG(LEFT_ARROW))   &none   &none       &none    &none  &bt BT_SEL 0         &bt BT_SEL 1       &bt BT_SEL 2                  &none  &kp LC(LG(RIGHT_ARROW))
+                                 &none  &bt BT_PRV   &trans        &trans           &bt BT_NXT         &bt BT_CLR
+        >;
+    };
+};
+
 };
